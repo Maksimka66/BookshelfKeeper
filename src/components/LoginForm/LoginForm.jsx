@@ -35,10 +35,13 @@ const LoginForm = () => {
             <Field type="password" name="password" id={passwordId} />
             <ErrorMessage name="password" as="span" />
           </div>
-          <button type="submit">Login</button>
-          <button type="click" onClick={showLoginForm}>
-            Register
-          </button>
+
+          <div>
+            <button type="submit">Login</button>
+            <button type="click" onClick={showLoginForm}>
+              Register
+            </button>
+          </div>
         </Form>
       </Formik>
       <div>

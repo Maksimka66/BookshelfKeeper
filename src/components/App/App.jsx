@@ -5,15 +5,14 @@ import Login from "../../pages/Login/Login";
 import NotFound from "../../pages/NotFound/NotFound";
 
 import "./App.css";
-import MobileFirstPage from "../../pages/MobileFirstPage/MobileFirstPage";
 import FirstPage from "../../pages/FirstPage/FirstPage";
 
 function App() {
   console.log(window.innerWidth);
+
   return (
     <>
-      {window.innerWidth < 768 ? <MobileFirstPage /> : <FirstPage />}
-
+      <FirstPage />
       <Routes>
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />

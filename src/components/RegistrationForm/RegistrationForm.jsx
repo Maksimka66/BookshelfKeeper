@@ -1,5 +1,6 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Link } from "react-router-dom";
 import { registerUserSchema } from "../../Schemas/schemas";
 
 const RegistrationForm = () => {
@@ -15,12 +16,10 @@ const RegistrationForm = () => {
   const passwordId = useId();
   const confirmPasswordId = useId();
 
-  const showRegisterForm = () => {};
-
   const submitRegister = () => {};
 
   return (
-    <div>
+    <>
       <Formik
         initialValues={initialValues}
         onSubmit={submitRegister}
@@ -55,14 +54,12 @@ const RegistrationForm = () => {
             <button type="submit">Register</button>
             <div>
               <p>Already have an account?</p>
-              <button type="click" onClick={showRegisterForm}>
-                Log in
-              </button>
+              <Link to="/auth/login">Log in</Link>
             </div>
           </div>
         </Form>
       </Formik>
-    </div>
+    </>
   );
 };
 

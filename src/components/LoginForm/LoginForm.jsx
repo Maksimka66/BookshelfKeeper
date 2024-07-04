@@ -2,6 +2,7 @@ import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import { loginUserSchema } from "../../Schemas/schemas";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const initialValues = {
@@ -17,7 +18,7 @@ const LoginForm = () => {
   const submitLogin = () => {};
 
   return (
-    <div>
+    <>
       <Formik
         initialValues={initialValues}
         onSubmit={submitLogin}
@@ -38,9 +39,7 @@ const LoginForm = () => {
 
           <div>
             <button type="submit">Login</button>
-            <button type="click" onClick={showLoginForm}>
-              Register
-            </button>
+            <Link to="/auth/register">Register</Link>
           </div>
         </Form>
       </Formik>
@@ -52,7 +51,7 @@ const LoginForm = () => {
         <div></div>
         <p>Francis Bacon</p>
       </div>
-    </div>
+    </>
   );
 };
 

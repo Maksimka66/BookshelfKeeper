@@ -8,11 +8,10 @@ import "./App.css";
 import FirstPage from "../../pages/FirstPage/FirstPage";
 
 function App() {
-  console.log(window.innerWidth);
-
   return (
     <>
       <FirstPage />
+
       <Routes>
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />

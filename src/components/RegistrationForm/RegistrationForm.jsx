@@ -52,13 +52,13 @@ const RegistrationForm = () => {
 
           <div>
             <button type="submit">Register</button>
-            <div>
-              <p>Already have an account?</p>
-              <Link to="/auth/login">Log in</Link>
-            </div>
           </div>
         </Form>
       </Formik>
+      <div>
+        <p>Already have an account?</p>
+        <Link to="/auth/login">Log in</Link>
+      </div>
     </>
   );
 };

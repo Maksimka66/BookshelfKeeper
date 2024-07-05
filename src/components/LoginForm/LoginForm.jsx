@@ -13,36 +13,34 @@ const LoginForm = () => {
   const emailId = useId();
   const passwordId = useId();
 
-  const showLoginForm = () => {};
-
   const submitLogin = () => {};
 
   return (
     <>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={submitLogin}
-        validationSchema={loginUserSchema}
-      >
-        <Form>
-          <div>
-            <label htmlFor={emailId}>Email</label>
-            <Field type="email" name="email" id={emailId} />
-            <ErrorMessage name="email" as="span" />
-          </div>
+      <div>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={submitLogin}
+          validationSchema={loginUserSchema}
+        >
+          <Form>
+            <div>
+              <label htmlFor={emailId}>Email</label>
+              <Field type="email" name="email" id={emailId} />
+              <ErrorMessage name="email" as="span" />
+            </div>
 
-          <div>
-            <label htmlFor={passwordId}>Password</label>
-            <Field type="password" name="password" id={passwordId} />
-            <ErrorMessage name="password" as="span" />
-          </div>
+            <div>
+              <label htmlFor={passwordId}>Password</label>
+              <Field type="password" name="password" id={passwordId} />
+              <ErrorMessage name="password" as="span" />
+            </div>
 
-          <div>
             <button type="submit">Login</button>
-            <Link to="/auth/register">Register</Link>
-          </div>
-        </Form>
-      </Formik>
+          </Form>
+        </Formik>
+        <Link to="/auth/register">Register</Link>
+      </div>
       <div>
         <span>“</span>
         <p>
